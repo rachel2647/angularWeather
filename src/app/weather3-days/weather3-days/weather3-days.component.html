@@ -1,0 +1,10 @@
+<input type="text" placeholder="city" name="cityInput" [(ngModel)]="city" />
+<button (click)="getWeather3Days()">get weather for 3 days</button>
+
+<div *ngIf="show">
+    <div *ngFor="let day of weathers">
+        <li>
+            {{day.date}} avgtemp_c:{{day.avgtemp_c}} avgvis_km:{{day.avgvis_km}}
+        </li>
+    </div>
+</div>
